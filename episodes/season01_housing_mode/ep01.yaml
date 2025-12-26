@@ -1,0 +1,104 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 1
+  episode_id: "S01E01"
+  working_title: "Your Rent Dropped… Until It Read One Text."
+  target_length_seconds: 85
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "RENT REVOKED"
+  title_a: "Your Rent Dropped… Until It Read One Text."
+  title_b: "One Discount. One Permission. One Lockout."
+  hook_line: "My rent went DOWN… and then the system read one text."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "relieved → defensive → controlled panic"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "polite, calm, chilling certainty"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "RENT UPDATE: -18% APPROVED"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Finally."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:02.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_confirm_savings"
+    on_screen: "Enable Context Access to prevent fraud."
+    vo:
+      SYSTEM: "This keeps housing fair."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:07.5"
+    type: "URGENCY"
+    ui_component: "timer_15s"
+    on_screen: "OFFER EXPIRES IN 15 SECONDS"
+    vo:
+      HUMAN: "Why would my rent need my messages?"
+    sfx: ["ui_tick_loop"]
+
+  - t: "00:14.0"
+    type: "CONSENT_CLICK"
+    ui_component: "btn_accept"
+    on_screen: "ACCEPT"
+    sfx: ["ui_click", "scan_tone"]
+
+  - t: "00:18.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_risk_signal"
+    on_screen: "RISK SIGNAL DETECTED"
+    overlay_text_snippet: "I might have to move if this goes up again."
+    vo:
+      SYSTEM: "Instability indicator."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:28.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "card_rate_flip"
+    on_screen: "-18% REVOKED → NEW RATE: +11%"
+    vo:
+      HUMAN: "That was private."
+      SYSTEM: "It was predictive."
+    sfx: ["bass_hit", "ui_alert_soft"]
+
+  - t: "00:38.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_appeal_available"
+    on_screen: "APPEAL: A) Instant Re-rate (Full Access)  B) Human Review (90–120 days)"
+    vo:
+      SYSTEM: "Human review requires verification."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:52.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_smart_lock_limited"
+    on_screen: "ACCESS: TEMP LIMITED"
+    vo:
+      HUMAN: "My key isn’t working."
+      SYSTEM: "Residence not confirmed."
+    sfx: ["lock_denied", "low_rumble"]
+
+  - t: "01:05.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Share full access to keep your home  B) Wait for human review and risk lockout"
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:13.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

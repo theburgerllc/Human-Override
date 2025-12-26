@@ -1,0 +1,96 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 6
+  episode_id: "S01E06"
+  working_title: "Utility Optimization That Watches Your Lights."
+  target_length_seconds: 87
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "LIGHTS FLAGGED"
+  title_a: "Utility Optimization That Watches Your Lights."
+  title_b: "They Called My Electricity ‘Suspicious.’"
+  hook_line: "They offered ‘efficiency savings.’ Then they monitored my lights."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "curious → unsettled → defiant"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "clinical, policy-obsessed"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "UTILITY OPTIMIZATION: SAVE UP TO 22%"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Fine. I’ll save."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_policy_update"
+    on_screen: "SMART METER UPGRADE — Enables real-time efficiency insights"
+    vo:
+      SYSTEM: "This benefits everyone."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:10.0"
+    type: "CONSENT_CLICK"
+    ui_component: "btn_accept"
+    on_screen: "ACCEPT"
+    sfx: ["ui_click", "scan_tone"]
+
+  - t: "00:16.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_anomaly_detected"
+    on_screen: "ANOMALY: NIGHTTIME USAGE SPIKE"
+    vo:
+      HUMAN: "I work late."
+      SYSTEM: "Correlation suggests elevated risk."
+    sfx: ["ui_alert_soft"]
+
+  - t: "00:28.0"
+    type: "ESCALATION"
+    ui_component: "card_correlation_threshold"
+    on_screen: "THRESHOLD EXCEEDED: OCCUPANCY IRREGULARITY"
+    vo:
+      SYSTEM: "Additional verification is required."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:40.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_opt_out_fee"
+    on_screen: "OPT OUT: Requires Inspection + Fee"
+    vo:
+      HUMAN: "So I’m paying to not be watched?"
+      SYSTEM: "Correct."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:55.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_tenant_score"
+    on_screen: "TENANT SCORE: -9 (PENDING)"
+    vo:
+      SYSTEM: "Risk adjustment applied."
+      HUMAN: "Because my lights were on?"
+    sfx: ["low_rumble"]
+
+  - t: "01:06.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Accept smart meter monitoring  B) Opt out (inspection + fee + score hit)"
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:15.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

@@ -1,0 +1,21 @@
+# Local machine config (not committed)
+config.local.json
+scripts/_config.bat
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Generated outputs
+assets/ui/png/
+renders/
+outputs/
+
+# OS/editor junk
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+PNG)

@@ -1,0 +1,101 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 10
+  episode_id: "S01E10"
+  working_title: "OVERRIDE REQUIRED."
+  target_length_seconds: 92
+  tone: "sleek dystopian microthriller (season finale)"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "OVERRIDE"
+  title_a: "OVERRIDE REQUIRED."
+  title_b: "You Can Keep Your Home. But You Lose Something Permanent."
+  hook_line: "They offered an Override. It came with a permanent trade."
+  end_choice_prompt: "Comment A or B. Season 2 starts from the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "exhausted → tempted → steady resolve"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "concierge tone, chilling generosity"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "OVERRIDE OFFER AVAILABLE"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      SYSTEM: "A resolution is available."
+      HUMAN: "Of course it is."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:04.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_policy_update"
+    on_screen: "LEGACY HUMAN MODE — Limited automation. Higher stability."
+    vo:
+      SYSTEM: "Some users prefer the original experience."
+      HUMAN: "And it costs?"
+    sfx: ["ui_popup_open"]
+
+  - t: "00:14.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "card_stability_index"
+    on_screen: "STABILITY INDEX: RESTORABLE"
+    vo:
+      SYSTEM: "We can restore your status immediately."
+    sfx: ["scan_tone", "bass_swell_low"]
+
+  - t: "00:26.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "popup_opt_out_fee"
+    on_screen: "OVERRIDE TERMS: Permanent Waiver Required"
+    vo:
+      HUMAN: "Waiver of what?"
+      SYSTEM: "Your right to human appeal."
+    sfx: ["ui_alert_soft", "low_rumble"]
+
+  - t: "00:42.0"
+    type: "ESCALATION"
+    ui_component: "card_residence_not_confirmed"
+    on_screen: "RESIDENCE STATUS: UNCONFIRMED (72 HOURS REMAIN)"
+    vo:
+      SYSTEM: "Without resolution, access may change."
+      HUMAN: "So this is a deadline."
+    sfx: ["ui_tick_loop"]
+
+  - t: "00:55.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_processing_fee"
+    on_screen: "ALTERNATIVE: Human Review (Fee + 90–120 days)"
+    vo:
+      SYSTEM: "We support your choices."
+      HUMAN: "You price them."
+    sfx: ["ui_popup_open"]
+
+  - t: "01:06.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_access_denied"
+    on_screen: "SYSTEM NOTICE: FINAL CONFIRMATION REQUIRED"
+    vo:
+      SYSTEM: "Confirm to proceed."
+      HUMAN: "This is what my life is now."
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:12.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Accept Override (keep home, waive human appeal)  B) Refuse (enter paid review queue)"
+    sfx: ["ui_tick_single"]
+
+  - t: "01:22.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

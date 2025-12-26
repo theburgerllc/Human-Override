@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\theburgerllc\Desktop\The Human\reproduce_issue.py", line 15, in <module>
+    build_animatic_filter(Path("."), data, 30, "minimal_glass", "S01E01")
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\theburgerllc\Desktop\The Human\tools\tho.py", line 551, in build_animatic_filter
+    ui_png = find_ui_png(root, ui_name)
+             ^^^^^^^^^^^
+NameError: name 'find_ui_png' is not defined. Did you mean: 'find_fx_png'?

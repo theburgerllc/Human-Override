@@ -1,0 +1,34 @@
+mode: HOUSING_MODE
+meta:
+  target_length_seconds: 15.0
+beats:
+  - t: "00:00.0"
+    type: popup
+    ui_component: popup_verify_identity
+    on_screen: "VERIFY IDENTITY"
+    duration_s: 3.0
+  
+  - t: "00:03.0"
+    type: card
+    ui_component: card_risk_signal
+    on_screen: "RISK DETECTED"
+    duration_s: 3.0
+
+  - t: "00:06.0"
+    type: timer
+    ui_component: timer_15s
+    on_screen: "OFFER EXPIRES"
+    duration_s: 3.0
+    
+  - t: "00:09.0"
+    type: bug
+    ui_component: brand_corner_bug_override
+    on_screen: "THE HUMAN OVERRIDE"
+    duration_s: 3.0
+
+packaging:
+  series: "The Human Override"
+  season: "S01"
+  episode: "E01"
+
+characters: []

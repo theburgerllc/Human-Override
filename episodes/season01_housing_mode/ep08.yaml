@@ -1,0 +1,89 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 8
+  episode_id: "S01E08"
+  working_title: "Insurance Premium Spike After a Visitor."
+  target_length_seconds: 88
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "COVERAGE CUT"
+  title_a: "Insurance Premium Spike After a Visitor."
+  title_b: "A Guest Triggered My Coverage Exclusions."
+  hook_line: "Someone visited me once. My insurance reacted instantly."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "matter-of-fact → shocked → bargaining"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "formal, insurer voice, final"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "HOME COVERAGE: ACTIVE"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Okay. At least that’s stable."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_guest_recognition"
+    on_screen: "GUEST RECOGNITION: UNREGISTERED VISITOR"
+    vo:
+      SYSTEM: "Guest event detected."
+      HUMAN: "That was my friend."
+    sfx: ["ui_alert_soft"]
+
+  - t: "00:14.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "card_rate_flip"
+    on_screen: "PREMIUM UPDATE: +27%"
+    vo:
+      HUMAN: "Twenty-seven percent—why?"
+      SYSTEM: "Risk reclassification."
+    sfx: ["bass_swell_low", "bass_hit"]
+
+  - t: "00:26.0"
+    type: "ESCALATION"
+    ui_component: "card_coverage_exclusion"
+    on_screen: "NEW EXCLUSION: UNVERIFIED GUEST INCIDENTS"
+    vo:
+      HUMAN: "So if something happens… I’m not covered?"
+      SYSTEM: "Correct."
+    sfx: ["low_rumble"]
+
+  - t: "00:40.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_policy_update"
+    on_screen: "RESTORE COVERAGE: Register guests with ID + Face match (optional)"
+    vo:
+      SYSTEM: "This improves community safety."
+      HUMAN: "You want my guests’ IDs?"
+    sfx: ["ui_popup_open"]
+
+  - t: "00:56.0"
+    type: "URGENCY"
+    ui_component: "timer_bar"
+    on_screen: "COVERAGE GAP ACTIVATES AT MIDNIGHT"
+    sfx: ["ui_tick_loop"]
+
+  - t: "01:06.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Register guests to restore coverage  B) Refuse (pay more + accept exclusions)"
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:15.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

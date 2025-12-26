@@ -1,0 +1,90 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 5
+  episode_id: "S01E05"
+  working_title: "Deposit Freeze: ‘Fraud Prevention’ Hold."
+  target_length_seconds: 84
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "FUNDS HELD"
+  title_a: "Deposit Freeze: ‘Fraud Prevention’ Hold."
+  title_b: "They Put My Money ‘Under Review.’"
+  hook_line: "They flagged my deposit as ‘anomaly.’ Then they held it."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "confident → alarmed → controlled rage"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "soothing tone, hard limits"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "DEPOSIT RECEIVED — PROCESSING"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Good. Done."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_anomaly_detected"
+    on_screen: "ANOMALY: PAYMENT ORIGIN VARIANCE"
+    vo:
+      SYSTEM: "Fraud prevention triggered."
+      HUMAN: "It’s my money."
+    sfx: ["ui_alert_soft"]
+
+  - t: "00:14.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "popup_deposit_hold"
+    on_screen: "HOLD PLACED — FUNDS UNAVAILABLE"
+    vo:
+      SYSTEM: "This protects the community."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:24.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_policy_update"
+    on_screen: "VERIFY SOURCE: Link accounts + share transaction history"
+    vo:
+      SYSTEM: "Instant verification is available."
+      HUMAN: "You want my full history?"
+    sfx: ["ui_popup_open"]
+
+  - t: "00:38.0"
+    type: "URGENCY"
+    ui_component: "timer_bar"
+    on_screen: "LEASE DEADLINE IN 24 HOURS"
+    vo:
+      HUMAN: "If that deposit doesn’t clear, I’m done."
+    sfx: ["ui_tick_loop"]
+
+  - t: "00:52.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_access_denied"
+    on_screen: "SERVICE LIMITED UNTIL VERIFICATION"
+    vo:
+      SYSTEM: "Certain services are paused."
+      HUMAN: "Which services?"
+    sfx: ["low_rumble"]
+
+  - t: "01:05.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Link accounts + share history (release funds)  B) Refuse + wait 7–10 days"
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:13.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

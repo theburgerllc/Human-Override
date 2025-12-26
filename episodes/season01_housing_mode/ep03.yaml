@@ -1,0 +1,96 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 3
+  episode_id: "S01E03"
+  working_title: "Your Tenant Score Dropped Because You Slept In."
+  target_length_seconds: 88
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "SCORE DOWN"
+  title_a: "Your Tenant Score Dropped Because You Slept In."
+  title_b: "A Discount That Penalized Your Sleep."
+  hook_line: "They offered a ‘wellness discount.’ Then they scored my sleep."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "hopeful → bargaining → disbelief"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "helpful tone, punitive outcomes"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "WELLNESS DISCOUNT: -$120/MO AVAILABLE"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "No way… I need that."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_policy_update"
+    on_screen: "ENABLE WELLNESS INTEGRATION — Sleep / Steps / Screen Time"
+    vo:
+      SYSTEM: "Healthy tenants are stable tenants."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:10.0"
+    type: "CONSENT_CLICK"
+    ui_component: "toggle_wellness"
+    on_screen: "WELLNESS: ON"
+    sfx: ["ui_click", "scan_tone"]
+
+  - t: "00:16.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_anomaly_detected"
+    on_screen: "ANOMALY DETECTED: SLEEP VARIANCE"
+    vo:
+      HUMAN: "It was one late night."
+      SYSTEM: "Patterns matter."
+    sfx: ["ui_alert_soft"]
+
+  - t: "00:28.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "card_tenant_score"
+    on_screen: "TENANT SCORE: -14"
+    vo:
+      SYSTEM: "Irregular schedule correlates with missed payments."
+      HUMAN: "I paid early."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:40.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_stability_plan"
+    on_screen: "STABILITY PLAN: Auto-pay + Location Always-On + Calendar Access"
+    vo:
+      SYSTEM: "Restore your score instantly."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:54.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_deposit_adjustment_pending"
+    on_screen: "DEPOSIT ADJUSTMENT: PENDING"
+    vo:
+      HUMAN: "You’re charging me for sleeping?"
+      SYSTEM: "It’s risk management."
+    sfx: ["low_rumble"]
+
+  - t: "01:05.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Accept Stability Plan (always-on)  B) Opt out (lose discount + deposit increases)"
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:14.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

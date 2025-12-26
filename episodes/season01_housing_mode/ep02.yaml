@@ -1,0 +1,104 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 2
+  episode_id: "S01E02"
+  working_title: "The Smart Lock ‘Verification’ Update."
+  target_length_seconds: 82
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "LOCKED OUT"
+  title_a: "The Smart Lock ‘Verification’ Update."
+  title_b: "Your Door Updated… While You Were Outside."
+  hook_line: "My door got an update. Then it asked for ‘verification.’"
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "annoyed → confused → humiliated panic"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "gentle, patronizing, unmovable"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "SMART LOCK UPDATE COMPLETE"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Okay… cool."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:02.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_safety_sync_required"
+    on_screen: "SAFETY SYNC REQUIRED — Prevents unauthorized entry."
+    vo:
+      SYSTEM: "This protects you."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:08.0"
+    type: "URGENCY"
+    ui_component: "timer_bar"
+    on_screen: "SYNC WINDOW: 10 MINUTES"
+    vo:
+      HUMAN: "I’m literally holding my key."
+    sfx: ["ui_tick_loop"]
+
+  - t: "00:15.0"
+    type: "CONSENT_CLICK"
+    ui_component: "btn_later"
+    on_screen: "LATER"
+    vo:
+      HUMAN: "Later."
+    sfx: ["ui_click"]
+
+  - t: "00:20.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_access_denied"
+    on_screen: "ENTRY ATTEMPT DETECTED — ACCESS DENIED"
+    vo:
+      HUMAN: "That’s me. That’s my door."
+    sfx: ["lock_denied", "ui_alert_soft"]
+
+  - t: "00:28.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_verify_identity"
+    on_screen: "VERIFY IDENTITY — Face / Voice / Trusted Contacts"
+    vo:
+      SYSTEM: "Identity refresh required."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:36.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_risk_signal"
+    on_screen: "RISK SIGNAL: VOICE STRESS"
+    vo:
+      SYSTEM: "Stress indicates elevated risk."
+      HUMAN: "I’m stressed because I’m locked out."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:48.0"
+    type: "TRAP_APPEAL"
+    ui_component: "card_review_eta"
+    on_screen: "UNLOCK OPTIONS: A) Full Device Access (Instant)  B) Human Technician (48–72 hours)"
+    vo:
+      SYSTEM: "Human technician availability is limited."
+    sfx: ["ui_tick_single"]
+
+  - t: "01:05.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Grant full device access to unlock now  B) Wait 48–72 hours"
+    sfx: ["silence_drop"]
+
+  - t: "01:12.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

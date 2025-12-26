@@ -1,0 +1,92 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 9
+  episode_id: "S01E09"
+  working_title: "Human Review Costs $299."
+  target_length_seconds: 90
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "PAY TO APPEAL"
+  title_a: "Human Review Costs $299."
+  title_b: "I Tried to Appeal the Algorithm."
+  hook_line: "I asked for a human. The system sent me a price."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "calm at first → humiliated → forced decision"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "service-desk polite, infuriatingly procedural"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "APPEAL SUBMITTED"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Okay. A person will fix this."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "popup_processing_fee"
+    on_screen: "HUMAN REVIEW FEE: $299"
+    vo:
+      SYSTEM: "Manual review requires a processing fee."
+      HUMAN: "For what?"
+    sfx: ["ui_popup_open", "ui_alert_soft"]
+
+  - t: "00:15.0"
+    type: "ESCALATION"
+    ui_component: "card_review_eta"
+    on_screen: "WITHOUT FEE: REVIEW ETA 90–120 DAYS"
+    vo:
+      SYSTEM: "Standard queue applies."
+      HUMAN: "That’s four months."
+    sfx: ["ui_tick_single", "low_rumble"]
+
+  - t: "00:28.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_correlation_threshold"
+    on_screen: "THRESHOLD EXCEEDED: INSUFFICIENT COOPERATION"
+    vo:
+      SYSTEM: "Non-cooperation increases risk."
+      HUMAN: "I’m cooperating right now."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:42.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_policy_update"
+    on_screen: "FAST APPEAL: Pay fee + grant full access for 'context confirmation'"
+    vo:
+      SYSTEM: "This helps prevent bias."
+      HUMAN: "You want access to prove you aren’t biased?"
+    sfx: ["ui_popup_open"]
+
+  - t: "00:58.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_access_denied"
+    on_screen: "ACCOUNT STATUS: LIMITED (UNTIL RESOLVED)"
+    vo:
+      HUMAN: "So I’m limited… until I pay?"
+      SYSTEM: "Until verification is complete."
+    sfx: ["low_rumble"]
+
+  - t: "01:08.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Pay $299 + grant access for fast review  B) Refuse + wait 90–120 days"
+    sfx: ["silence_drop", "ui_tick_single"]
+
+  - t: "01:18.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

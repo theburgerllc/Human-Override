@@ -1,0 +1,97 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 7
+  episode_id: "S01E07"
+  working_title: "Neighborhood Safety Mode."
+  target_length_seconds: 85
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "CURFEW ALERT"
+  title_a: "Neighborhood Safety Mode."
+  title_b: "My Building Started Routing Me Home."
+  hook_line: "They turned on ‘Safety Mode’—and it started controlling my routes."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "trying to be reasonable → creeped out"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "protective language, controlling output"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "NEIGHBORHOOD SAFETY MODE: ENABLED"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      SYSTEM: "Safety improvements are now active."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_policy_update"
+    on_screen: "ALLOW LOCATION — Provides safe routing & risk alerts"
+    vo:
+      SYSTEM: "This reduces harm."
+      HUMAN: "Why do you need my location?"
+    sfx: ["ui_popup_open"]
+
+  - t: "00:12.0"
+    type: "URGENCY"
+    ui_component: "timer_bar"
+    on_screen: "COMPLIANCE WINDOW: 30 SECONDS"
+    sfx: ["ui_tick_loop"]
+
+  - t: "00:18.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_neighborhood_safety"
+    on_screen: "RISK CORRIDOR ACTIVE — ROUTE ADJUSTED"
+    vo:
+      HUMAN: "That route is… longer."
+      SYSTEM: "It is safer."
+    sfx: ["bass_swell_low"]
+
+  - t: "00:32.0"
+    type: "ESCALATION"
+    ui_component: "card_risk_signal"
+    on_screen: "RISK SIGNAL: AFTER-HOURS MOVEMENT"
+    vo:
+      SYSTEM: "After-hours movement increases risk."
+      HUMAN: "I’m going to the store."
+    sfx: ["ui_alert_soft"]
+
+  - t: "00:45.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_access_denied"
+    on_screen: "ENTRY DELAY: SAFETY CHECK IN PROGRESS"
+    vo:
+      HUMAN: "My building is… delaying entry?"
+      SYSTEM: "For your protection."
+    sfx: ["low_rumble", "ui_tick_single"]
+
+  - t: "00:58.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_policy_update"
+    on_screen: "FAST ENTRY: Enable Always-On Location + Background Motion Data"
+    vo:
+      SYSTEM: "Instant improvement available."
+    sfx: ["ui_popup_open"]
+
+  - t: "01:06.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Enable always-on location for fast entry  B) Keep location off (delays + checks)"
+    sfx: ["silence_drop"]
+
+  - t: "01:14.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

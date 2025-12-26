@@ -1,0 +1,11 @@
+@echo off
+REM Copy to _config.bat (ignored by git) and edit paths.
+
+if not defined INKSCAPE set INKSCAPE=C:\Program Files\Inkscape\bin\inkscape.com
+if not defined FFMPEG set FFMPEG=C:\ffmpeg\bin\ffmpeg.exe
+
+REM whisper.cpp (example)
+set WHISPER_EXE=C:\whispercpp\main.exe
+set WHISPER_MODEL=C:\whispercpp\models\ggml-base.en.bin
+
+set REPO_ROOT=%~dp0..

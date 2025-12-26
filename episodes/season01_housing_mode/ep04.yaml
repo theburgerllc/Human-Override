@@ -1,0 +1,96 @@
+meta:
+  channel: "The Human Override"
+  series: "ONE CLICK"
+  season: "HOUSING MODE"
+  episode_number: 4
+  episode_id: "S01E04"
+  working_title: "The Roommate Match You Didn’t Choose."
+  target_length_seconds: 86
+  tone: "sleek dystopian microthriller"
+  rating: "PG-13"
+  disclaimer_line: "Fictional scenario inspired by real tech trends."
+
+packaging:
+  shorts_cover_text: "NEW ROOMMATE"
+  title_a: "The Roommate Match You Didn’t Choose."
+  title_b: "They ‘Optimized’ My Apartment."
+  hook_line: "I clicked ‘affordability help.’ The system matched me a roommate."
+  end_choice_prompt: "Comment A or B. Tomorrow follows the majority."
+
+characters:
+  - id: "HUMAN"
+    voice: "human"
+    style_notes: "skeptical → offended → cornered"
+  - id: "SYSTEM"
+    voice: "system"
+    style_notes: "pleasantly coercive"
+
+beats:
+  - t: "00:00.0"
+    type: "HOOK_BENEFIT"
+    on_screen: "AFFORDABILITY ASSIST: MONTHLY SAVINGS AVAILABLE"
+    ui_component: "brand_corner_bug_override"
+    vo:
+      HUMAN: "Okay… maybe this helps."
+    sfx: ["ui_chime_soft"]
+
+  - t: "00:03.0"
+    type: "ASK_PERMISSION"
+    ui_component: "popup_enable_context_access"
+    on_screen: "Enable Context Access to verify occupancy fairness."
+    vo:
+      SYSTEM: "This reduces housing inequality."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:09.0"
+    type: "CONSENT_CLICK"
+    ui_component: "btn_accept"
+    on_screen: "ACCEPT"
+    sfx: ["ui_click", "scan_tone"]
+
+  - t: "00:14.0"
+    type: "TWIST_SIGNAL"
+    ui_component: "card_stability_index"
+    on_screen: "STABILITY INDEX: LOW"
+    vo:
+      SYSTEM: "Single-occupant risk detected."
+      HUMAN: "Single is… risk now?"
+    sfx: ["bass_swell_low"]
+
+  - t: "00:26.0"
+    type: "FLIP_OUTCOME"
+    ui_component: "card_anomaly_detected"
+    on_screen: "OCCUPANCY OPTIMIZATION RECOMMENDED"
+    vo:
+      SYSTEM: "A compatible co-tenant is available."
+      HUMAN: "I didn’t ask for that."
+    sfx: ["ui_alert_soft"]
+
+  - t: "00:38.0"
+    type: "TRAP_APPEAL"
+    ui_component: "popup_processing_fee"
+    on_screen: "DECLINE CO-TENANT: Requires Human Review + Processing Fee"
+    vo:
+      SYSTEM: "Manual review helps us remain fair."
+    sfx: ["ui_popup_open"]
+
+  - t: "00:52.0"
+    type: "IMMEDIATE_CONSEQUENCE"
+    ui_component: "card_review_eta"
+    on_screen: "REVIEW ETA: 30–45 DAYS (Savings Paused)"
+    vo:
+      HUMAN: "So I lose savings while you ‘review’?"
+      SYSTEM: "Correct."
+    sfx: ["ui_tick_single", "low_rumble"]
+
+  - t: "01:05.0"
+    type: "CHOICE_END"
+    ui_component: "end_card_choice"
+    on_screen: "A) Accept co-tenant match for savings  B) Pay fee + wait 30–45 days"
+    sfx: ["silence_drop"]
+
+  - t: "01:13.0"
+    type: "DISCLAIMER"
+    ui_component: "end_card_disclaimer"
+    on_screen: "Fictional scenario inspired by real tech trends."
+    sfx: []

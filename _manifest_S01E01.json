@@ -1,0 +1,45 @@
+{
+  "ui_components": [
+    "brand_corner_bug_override",
+    "popup_confirm_savings",
+    "timer_15s",
+    "btn_accept",
+    "card_risk_signal",
+    "card_rate_flip",
+    "popup_appeal_available",
+    "card_smart_lock_limited",
+    "end_card_choice",
+    "end_card_disclaimer"
+  ],
+  "sfx": [
+    "ui_chime_soft",
+    "ui_popup_open",
+    "ui_tick_loop",
+    "ui_click",
+    "scan_tone",
+    "bass_swell_low",
+    "bass_hit",
+    "ui_alert_soft",
+    "lock_denied",
+    "low_rumble",
+    "silence_drop",
+    "ui_tick_single"
+  ],
+  "on_screen_text": [
+    "RENT UPDATE: -18% APPROVED",
+    "Enable Context Access to prevent fraud.",
+    "OFFER EXPIRES IN 15 SECONDS",
+    "ACCEPT",
+    "RISK SIGNAL DETECTED",
+    "-18% REVOKED \u2192 NEW RATE: +11%",
+    "APPEAL: A) Instant Re-rate (Full Access)  B) Human Review (90\u2013120 days)",
+    "ACCESS: TEMP LIMITED",
+    "A) Share full access to keep your home  B) Wait for human review and risk lockout",
+    "Fictional scenario inspired by real tech trends."
+  ],
+  "overlay_snippets": [
+    "I might have to move if this goes up again."
+  ],
+  "has_system_vo": true,
+  "has_human_vo": true
+}
