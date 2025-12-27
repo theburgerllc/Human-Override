@@ -14,7 +14,13 @@ if errorlevel 1 (
 echo prereqs_exit=PASS
 
 REM Run unit tests
-python -m pytest -q
+REM Detect Python
+set PY=python
+if exist .venv\Scripts\python.exe set PY=.venv\Scripts\python.exe
+if exist "C:\Tools\venvs\the-human\Scripts\python.exe" set PY="C:\Tools\venvs\the-human\Scripts\python.exe"
+
+REM Run unit tests
+%PY% -m pytest -q
 if errorlevel 1 (
     echo pytest_exit=FAIL
     exit /b 1
